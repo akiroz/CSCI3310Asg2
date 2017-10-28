@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="176" id="lGM-5J-exF" customClass="CustomTableCell" customModule="CSCI_3310_Asg2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lGM-5J-exF" id="ePm-Vl-ghy">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="159.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1bw-ti-pbp">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="159.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="160" id="JuJ-Ea-G4G"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHf-zF-2Ka">
+                        <rect key="frame" x="170" y="28" width="124" height="29"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loc Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtJ-l1-K8D">
+                        <rect key="frame" x="170" y="77" width="70" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_star_empty.png" translatesAutoresizingMaskIntoConstraints="NO" id="D7K-bQ-PpS">
+                        <rect key="frame" x="170" y="109.5" width="32" height="32"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="Yge-RE-bxd"/>
+                            <constraint firstAttribute="height" constant="32" id="lgH-yz-0PB"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dHf-zF-2Ka" firstAttribute="top" secondItem="ePm-Vl-ghy" secondAttribute="topMargin" constant="20" id="Pb1-lY-Yf2"/>
+                    <constraint firstAttribute="bottom" secondItem="1bw-ti-pbp" secondAttribute="bottom" id="Q1W-fu-eVp"/>
+                    <constraint firstItem="NtJ-l1-K8D" firstAttribute="top" secondItem="dHf-zF-2Ka" secondAttribute="bottom" constant="20" id="TKD-3j-W08"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="D7K-bQ-PpS" secondAttribute="bottom" constant="10" id="Z4I-Ro-0qv"/>
+                    <constraint firstItem="NtJ-l1-K8D" firstAttribute="leading" secondItem="1bw-ti-pbp" secondAttribute="trailing" constant="10" id="ZTN-s0-7Xs"/>
+                    <constraint firstItem="1bw-ti-pbp" firstAttribute="top" secondItem="ePm-Vl-ghy" secondAttribute="top" id="gYT-Dd-IhK"/>
+                    <constraint firstItem="D7K-bQ-PpS" firstAttribute="leading" secondItem="1bw-ti-pbp" secondAttribute="trailing" constant="10" id="ghF-AT-HYn"/>
+                    <constraint firstItem="1bw-ti-pbp" firstAttribute="leading" secondItem="ePm-Vl-ghy" secondAttribute="leading" id="mDZ-Tz-gRX"/>
+                    <constraint firstItem="dHf-zF-2Ka" firstAttribute="leading" secondItem="1bw-ti-pbp" secondAttribute="trailing" constant="10" id="ujq-iy-PI6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="locLabel" destination="NtJ-l1-K8D" id="hOb-hg-BIH"/>
+                <outlet property="nameLabel" destination="dHf-zF-2Ka" id="AlQ-1h-006"/>
+                <outlet property="recordImageView" destination="1bw-ti-pbp" id="4cv-TH-hYM"/>
+                <outlet property="starImageView" destination="D7K-bQ-PpS" id="k4I-fy-J1c"/>
+            </connections>
+            <point key="canvasLocation" x="28" y="-80"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="img_star_empty.png" width="150" height="150"/>
+    </resources>
+</document>
